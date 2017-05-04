@@ -1,0 +1,19 @@
+{
+  "s3": {
+    "stage": {
+      "bucket": "projects-staging.seattletimes.com",
+      "path": "educational-buckwheat"
+    },
+    "live": {
+      "bucket": "projects.seattletimes.com",
+      "path": "/news-tips"
+    }
+  },
+  "title": "How to send confidential tips to The Seattle Times",
+  "description": "Do you have sensitive information that we should consider investigating? We’d love to hear from you.",
+  "url": "projects.seattletimes.com/news-tips",
+  "image": "assets/social.jpg",
+  "sheets": [],
+  "production": true,
+  "embedded": true
+}

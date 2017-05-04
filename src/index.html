@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <%= t.include("partials/_head.html") %>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  </head>
+  <body>
+
+    <%= t.include("partials/_nav.html") %>
+
+    <div class="note inactive">
+      You are viewing this page in an unsecured browser. <a href="https://www.google.com.">Click here</a> to be redirected to a secure mode. Please note that your visit could have been logged.
+    </div>
+
+    <header>
+        <img src="./assets/confidential.jpg">
+        <h1>Got a news tip?</h1>
+        <h2 class="sub">Here's how to send The Seattle Times a confidential message</h2>
+    </header>
+
+    <section class="intro">
+      <p>The Seattle Times has a <a href="http://www.seattletimes.com/pulitzers/">proud history</a> of investigative reporting that <a href="http://www.seattletimes.com/times-watchdog/">continues today</a>.</p>
+
+      <p>In many cases, that reporting is made possible by tips from the public. Do you have sensitive information that we should consider investigating? We’d love to hear from you.</p>
+
+      <p>If you have a general news tip, the fastest way to reach the newsroom is through our <a href="http://www.seattletimes.com/contact/">general contact page</a>. If you want to reach a specific reporter, try our <a href="http://www.seattletimes.com/newsroom-staff/">newsroom staff list</a>.</p>
+
+      <p>But if you would like additional security to protect your identity, we encourage you to utilize one of the options below. No system is completely secure, but these methods can provide more protection than other ways of communication.
+    </section>
+
+    <main>
+
+    <section id="signal">
+
+      <h2>Signal <img src="./assets/signal-logo.png"></h2>
+
+      <p>Signal is a free app that provides end-to-end encrypted communication for text, photos, videos and calls. It’s a great way to open communication with a Seattle Times reporter, and is one of the most secure methods of keeping your messages confidential, since neither the contents nor the metadata is available to third parties. You can download Signal from <a href="https://itunes.apple.com/us/app/signal-private-messenger/id874139669?mt=8">iTunes</a> or <a href="https://play.google.com/store/apps/details?id=org.thoughtcrime.securesms&hl=en">Google Play</a>. </p>
+
+      <p>How to contact an investigative reporter on Signal:</p>
+        <div class="individual">
+          <div>
+            <b>Mike Baker</b> <span class="number">206-464-2729</span>
+          </div>
+
+          <div>
+            <b>Daniel Gilbert</b> <span class="number">206-464-2288</span>
+          </div>
+
+          <div>
+            <b>Justin Mayo</b> <span class="number">206-464-3669</span>
+          </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <section id="email">
+      <h2>Encrypted email <img src="./assets/gnupg-logo.png"></h2> 
+
+      <p>We welcome encrypted emails using Pretty Good Privacy (PGP), a software that generates a public and private key that you can use to encrypt and decrypt messages. Using our public key and a browser extension, such as <a href="https://www.mailvelope.com/en/">Mailvelope</a>, you can encrypt your email messages. Here are some guides to setting up PGP on <a href="https://ssd.eff.org/en/module/how-use-pgp-windows">Windows</a> or <a href="https://ssd.eff.org/en/module/how-use-pgp-mac-os-x">Mac</a>.</p>
+
+      <p>PGP is designed to prevent third parties from reading the contents of your e-mail, but it does not necessarily protect the metadata (who you’re talking to or when messages were sent). We recommend setting up a brand new anonymous e-mail account, and connecting through a wifi access point away from home and work.</p>
+
+      <p>You can contact us with encrypted email at <a href="mailto:investigations@seattletimes.com">investigations@seattletimes.com</a>. Our public key is available <a href="./assets/public.asc">here</a>.</p>
+
+      <p>If you'd like to reach a specific investigative reporter, here's how to contact them:</p>
+<!-- 
+      <p class="contact">
+        Contact us via encrypted email at <a href="mailto:investigations@seattletimes.com">investigations@seattletimes.com. </a> Our public key is available <a href="./assets/public.asc">here.</a>
+      </p> -->
+
+        <div class="individual emails">
+          <div>
+            <b class="encrypted">Mike Baker</b> PGP: <a class="fingerprint" href="./assets/mbaker.asc">FE2929E6</a>
+
+            <br><a href="mailto:mbaker@seattletimes.com">mbaker@seattletimes.com</a>
+          </div>
+
+          <div>
+            <b class="encrypted">Daniel Gilbert</b> PGP: <a class="fingerprint" href="./assets/dgilbert.asc">BDE4BFE2</a> 
+
+            <br><a href="mailto:dgilbert@seattletimes.com">dgilbert@seattletimes.com</a>
+          </div><!-- 
+
+
+          <div>
+            <b class="encrypted">Justin Mayo</b> <a href="mailto:jmayo@seattletimes.com">jmayo@seattletimes.com</a>
+          </div>
+
+          <div>
+            <b class="encrypted">Christine Willmsen</b> <a href="mailto:cwillmsen@seattletimes.com">cwillmsen@seattletimes.com</a>
+          </div>
+        </div> -->
+
+      </section>
+
+    <hr>
+
+    <section id="mail">
+      <h2>Postal mail</h2>
+
+      <p>Mail delivered through the postal service can also help protect your identity, and is a great way of sending documents. We recommend that you put the letter or package in a public mailbox instead of going to a post office facility. We also recommend you do not include a return address on the front of the package.</p>
+
+      <div class="address-title">Our address</div>
+        <div class="address">Investigations editor
+        <div class="address">The Seattle Times
+        <div class="address">1000 Denny Way
+        <div class="address">Seattle, WA 98109
+      </div></div></div>
+    </section>
+
+    <section class = "credits">
+      Illustration by Gabriel Campanario
+    </section>
+  </main>
+
+
+
+
+    <%= t.include("partials/_navBottom.html") %>
+    <script src="app.js" async></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_foot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

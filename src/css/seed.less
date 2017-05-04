@@ -1,0 +1,412 @@
+@import "seattletimes";
+
+.intro {
+  max-width: 850px;
+  margin: auto;
+  font-family: @df-sans;
+  padding: 20px;
+
+  @media @tablet{
+    padding: 30px;
+  }
+
+  @media @mobile {
+    padding-top: 20px;
+  }
+
+  p {
+    font-size: 20px;
+    text-indent: 10px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    line-height: 31px;
+
+    @media @tablet {
+      font-size: 19px;
+      line-height: 25px;
+    }
+
+    @media @mobile {
+      font-size: 16px;
+      margin: 0px;
+      padding: 0px;
+      line-height: 22px;
+    }
+  }
+}
+
+.note {
+  max-width: 500px;
+  margin: auto;
+  display: block;
+  padding: 20px;
+  text-align: center;
+  background-color: @df-off-white;
+  border: 1px solid @df-light-gray;
+  border-radius: 3px;
+  font-family: @df-sans;
+  font-weight: bold;
+  position: relative;
+  top: 70px;
+
+  &.inactive {
+    display: none;
+  }
+
+  @media @mobile {
+    font-size: 15px;
+    top: 60px;
+  }
+}
+
+header {
+  text-align: center;
+
+  img {
+    width: 170px;
+    padding-top: 100px;
+    padding-bottom: 20px;
+
+    @media @mobile {
+      width: 100px;
+      padding-top: 75px;
+    }
+  }
+
+  h1 {
+    font-weight: bold;
+    text-align: center;
+    // padding-bottom: 20px;
+    font-size: 70px;
+    max-width: 650px;
+    margin: auto;
+
+    @media @tablet {
+      font-size: 55px;
+      padding-top: 20px;
+    }
+
+    @media @mobile {
+      font-size: 40px;
+      padding: 10px 0px 10px 0px;
+    }
+  }
+
+  div {
+    padding: 0px;
+  }
+
+  .sub {
+    font-size: 25px;
+    font-family: @df-sans;
+    text-align: center;
+    font-weight: bold;
+
+    @media @tablet {
+      font-size: 22px;
+      padding: 35px 40px 0px 40px;
+      margin: 0px;
+    }
+
+    @media @mobile {
+      font-size: 19px;
+      padding: 5px 20px 0px 20px;
+      margin: 0px;
+    }
+  }
+}
+
+
+//reporters list
+
+// .contact-title {
+//   text-align: center;
+// }
+
+.individual{
+  margin-top: 10px;
+  .display-flex();
+  flex-wrap: wrap;
+
+  padding: 10px; // padding for reporters
+
+  @media @mobile {
+    padding: 0px;
+  }
+
+  b {
+    display: block;
+    padding-top: 10px;
+
+    @media @mobile {
+      display: inline;
+      padding-right: 10px;
+    }
+  }
+
+  .name {
+    font-family: @df-sans;
+    font-weight: bold;
+    padding-bottom: 0px;
+
+    @media @mobile {
+      font-size: 16px;
+    }
+  }
+
+  div {
+    .flex(1 1 33%);
+    text-align: center;
+    font-family: @df-sans;
+
+    @media @tablet {
+      .flex(1 1 33%);
+    }
+
+    @media @mobile {
+      .flex(1 1 100%);
+      text-align: left;
+      font-size: 16px;
+      padding-bottom: 5px;;
+    }
+  }
+
+    &.emails {
+      div {
+        .flex(1 1 50%);
+
+      @media @mobile {
+        .flex(1 1 100%);
+      }
+
+    }
+
+    b {
+    display: block;
+    }
+
+  }
+}
+
+body {
+
+  main {
+    max-width: 650px;
+    margin: auto;
+    padding-top: 0px;
+    padding-bottom: 60px;
+
+    @media @tablet {
+      padding-top: 0px;
+    }
+
+    @media @mobile {
+      padding: 0px 20px 10px 20px;
+
+
+    }
+
+    p {
+      text-indent: 12px;
+      margin: auto;
+      padding-top: 10px;
+      font-family: @df-sans;
+
+      @media @mobile {
+        font-size: 16px;
+        line-height: 22px;
+      }
+
+      &.contact {
+        font-weight: bold;
+        text-indent: 0px;
+        padding-top: 25px;
+      }
+    }
+
+    .download {
+      font-family: @df-sans;
+      font-weight: normal;
+      padding-top: 10px;
+    }
+
+    .button {
+      background-color: @df-blue;
+      width: 125px;
+      font-family: @df-sans;
+      color: @df-off-white;
+      text-align: center;
+      padding: 8px;
+      margin-left: 5px;
+      margin-right: 3px;
+      margin-top: 10px;
+      border-radius: 5px;
+
+      a {
+        font-size: 18px;
+        color: @df-off-white;
+      }
+
+      &:hover {
+        background-color: #145687;
+        cursor: pointer;
+      }
+    }
+
+    h2 {
+      font-family: @df-serif;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 30px;
+
+      @media @mobile {
+        font-size: 25px;
+        margin-bottom: 15px;
+      }
+
+      img {
+        height: 30px;
+      }
+    }
+
+    section {
+      padding-top: 50px;
+      padding-bottom: 50px;
+
+      @media @tablet {
+        padding-top: 40px;
+      }
+
+      @media @mobile {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      }
+
+      &.credits {
+        text-align: right;
+        font-family: @df-sans;
+        font-size: 14px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    .address-title { 
+      font-family: @df-sans;
+      font-weight: bold;
+      padding-top: 20px;
+
+      @media @mobile {
+        font-size: 16px;
+      }
+
+    }
+
+    .address {
+      font-family: @df-sans;
+
+      @media @mobile {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+
+nav.main-nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+
+  .wrapper {
+    .display-flex();
+    .align-items(center);
+
+    .link-block {
+      display: block;
+      font-size: 16px;
+      font-family: @df-sans;
+      padding: 0 8px;
+
+      @media @mobile {
+        display: none;
+      }
+
+      a {
+        padding: 0 8px;
+        color: @df-blue;
+
+        &:visited {
+          color: @df-middle-gray;
+        }
+
+        &:hover, &:focus {
+          color: @df-blue;
+        }
+      }
+    }
+  }
+
+  .menu {
+    position: relative;
+    display: none;
+
+    @media @mobile {
+      display: block;
+      .flex(0 0 5%);
+      margin-left: auto;
+    }
+  }
+
+  .dropdown {
+    position: absolute;
+    top: 100%;
+    // left: 0px;
+    right: 0px;
+    margin: 0;
+    padding: 0;
+    z-index: 999;
+    background: white;
+    box-shadow: 4px 8px 8px fade(black, 10%);
+    list-style-type: none;
+    font-family: @df-sans;
+    font-size: 15px;
+    display: none;
+    min-width: 150px;
+
+    // @media @mobile {
+    //   right: 16px;
+    //   width: auto;
+    // }
+
+    li {
+      padding: 4px 16px 4px 4px;
+      border-bottom: 1px solid @df-light-gray;
+
+      @media @mobile {
+        padding: 8px 16px;
+      }
+
+      a {
+        color: @df-charcoal;
+
+        &:hover {
+          font-weight: bold;
+          color: @df-charcoal;
+        }
+      }
+    }
+  }
+
+  &.open {
+
+    .activate {
+      background: @df-light-gray;
+    }
+
+    .dropdown {
+      display: block;
+    }
+
+  }
+}

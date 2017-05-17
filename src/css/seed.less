@@ -163,6 +163,7 @@ header {
     .flex(1 1 33%);
     text-align: center;
     font-family: @df-sans;
+    padding-bottom: 15px; // adds padding to bottom of reporters' numbers
 
     @media @tablet {
       .flex(1 1 33%);
@@ -179,10 +180,11 @@ header {
     &.emails {
       div {
         .flex(1 1 50%);
-        padding-bottom: 10px;
+        padding-bottom: 15px; // adds padding below emails
 
       @media @mobile {
         .flex(1 1 100%);
+        padding-bottom: 0px;
       }
 
     }

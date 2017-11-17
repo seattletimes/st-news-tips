@@ -40,29 +40,13 @@
 
       <p>How to contact an investigative reporter on Signal:</p>
         <div class="individual">
+          <% csv.signal.forEach(function(row) { %>
           <div>
-            <b>Mike Baker</b> <br>Investigations <br>206-464-2729
+            <b><%= row.reporter %></b><br>
+            <%= row.beat %><br>
+            <%= row.phone %>
           </div>
-
-          <div>
-            <b>Jim Brunner</b> <br>Government and politics <br>206-515-5628
-          </div>
-
-          <div>
-            <b>Dominic Gates</b> <br> Boeing/Aerospace <br> 206-683-5329
-          </div>
-
-          <div>
-            <b>Daniel Gilbert</b> <br> Investigations <br> 206-464-2288
-          </div>
-
-          <div>
-            <b>Lewis Kamb</b> <br> Watchdog <br> 206-735-6299
-          </div>
-
-          <div>
-            <b>Justin Mayo</b> <br> Data journalist <br> 206-464-3669
-          </div>
+          <% }); %>
         </div>
     </section>
 
